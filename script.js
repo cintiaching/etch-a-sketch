@@ -18,7 +18,10 @@ createGrid(16);
 const button = document.querySelector("button")
 button.textContent = "Set Grid Size"
 button.addEventListener("click", () => {
-    gridSize = prompt("Enter your desired grid Size, e.g. enter 16 for 16 x 16 grids")
+    gridSize = prompt("Enter your desired grid Size (1-100), e.g. enter 16 for 16 x 16 grids")
+    if (gridSize >= 100 || gridSize <= 0) {
+        alert("Grid size must range from 1 to 100!")
+    }
     createGrid(gridSize);
     console.log(gridSize)
 })
@@ -26,7 +29,10 @@ button.addEventListener("click", () => {
 // "hover" effect
 // using event delegation
 container.addEventListener("mouseover", (e) => {
+    // Find the closest .grid cell from where the event started
     const cell = e.target.closest(".grid");
+    // Guard: ensure the cell exists and is inside the container
     if (!cell || !container.contains(cell)) return;
-    cell.id = "colored";
+    // Apply a persistent “hovered” style. Prefer class over id.
+    cell.classList.add("colored");
 });
