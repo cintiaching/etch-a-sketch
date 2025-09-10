@@ -4,7 +4,7 @@
     background-color: #ffffff;
     display: flex;
     flex-wrap: wrap;
-    width: 300px;
+    width: 60%;
     aspect-ratio: 1 / 1;
     box-sizing: border-box;
     justify-content: space-evenly;
@@ -13,7 +13,7 @@
 
 .grid {
     border: 1px solid rgb(137, 137, 137);
-    width: 18px;
+    /* width: 18px; */
     aspect-ratio: 1 / 1;
     flex: 1 1 auto;
     align-self: stretch;
