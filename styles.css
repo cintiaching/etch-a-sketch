@@ -19,3 +19,7 @@
     align-self: stretch;
     box-sizing: border-box;
 }
+
+#colored {
+    background-color: black;
+}
